@@ -24,9 +24,10 @@
     <string name="error_invalid_email">邮箱格式错误</string>
     <string name="error_invalid_password">密码太短</string>
     <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
+    <string name="error_field_required">邮箱为空</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
     <string name="title_activity_screen">Screen</string>
+    <string name="title_activity_register">Sign in</string>
 </resources>

@@ -14,12 +14,38 @@ import android.view.ViewGroup;
 
 public class huodong extends Fragment {
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_huodong, container, false);
+    private View mhuodongView;
+    private RecyclerView mRecyclerView;
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        mhuodongView = inflater.inflate(R.layout.fragment_fenlei, container, false);
+        return mhuodongView;
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
 
+        mRecyclerView = (RecyclerView) mhuodongView.findViewById(R.id.fl);
+//
+        //使用线性布局LinearLayoutManger
+        LinearLayoutManager manager = new LinearLayoutManager(mRecyclerView.getContext());
+//        manager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        mRecyclerView.setLayoutManager(manager);
+
+
+        //      mRecyclerView.setAdapter(new FenleiAdapter(getActivity()));
+
+        //创建adapter给recycleview填充内容
+        mRecyclerView.setAdapter(new HuodongAdapter());
+
+
+
+
+
+
+    }
 
 }

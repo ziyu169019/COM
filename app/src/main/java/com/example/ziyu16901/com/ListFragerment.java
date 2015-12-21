@@ -63,8 +63,8 @@ public class ListFragerment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         RecyclerView rv = (RecyclerView) inflater.inflate(
-                R.layout.fragment_list_fragerment, container, false);
-//        setupRecyclerView(rv);
+                R.layout.fragment_huodong, container, false);
+//       setupRecyclerView(rv);
         return rv;
     }
 //    private void setupRecyclerView(RecyclerView recyclerView) {
